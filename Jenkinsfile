@@ -14,7 +14,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          //dockerImage = docker.build(registry + ":$BUILD_NUMBER" , "./docker/uss-enterprise")
+          dockerImage = docker.build(registry + ":$BUILD_NUMBER" , "./docker/uss-enterprise")
         }
       }
     }
@@ -34,7 +34,7 @@ pipeline {
             docker.withRegistry('https://044661814431.dkr.ecr.ap-south-1.amazonaws.com', 'ecr:ap-south-1:aab5d928-39d8-4ce2-92af-ce9635a361e7') {
            
             //build image
-            def customImage = docker.build("uss-enterprise:latest", "./docker/uss-enterprise")
+            def customImage = docker.build("uss-enterprise:latest" , "./docker/uss-enterprise")
              
             //push image
             customImage.push()
