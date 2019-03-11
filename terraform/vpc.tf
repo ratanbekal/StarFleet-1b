@@ -1,5 +1,5 @@
 
-module "starfleet_base_vpc" {
+module "base_vpc" {
   source = "github.com/terraform-aws-modules/terraform-aws-vpc"
 
   name = "starfleet_base_vpc"
