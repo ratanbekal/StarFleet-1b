@@ -1,12 +1,12 @@
 terraform {
   backend "s3" {
-    bucket = "starfleet1-terraform-session" # ! REPLACE WITH YOUR TERRAFORM BACKEND BUCKET
-    key    = "starfleet1-terraform-session"
+    bucket = "starfleet1-terraform-session-ap-south-1" # ! REPLACE WITH YOUR TERRAFORM BACKEND BUCKET
+    key    = "starfleet1-terraform-session-ap-south-1"
     region = "ap-south-1"
   }
 }
 variable "S3_BACKEND_BUCKET" {
-  default = "starfleet1-terraform-session" # ! REPLACE WITH YOUR TERRAFORM BACKEND BUCKET
+  default = "starfleet1-terraform-session-ap-south-1" # ! REPLACE WITH YOUR TERRAFORM BACKEND BUCKET
 }
 
 variable "S3_BUCKET_REGION" {
